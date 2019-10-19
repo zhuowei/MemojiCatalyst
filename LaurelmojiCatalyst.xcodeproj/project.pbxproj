@@ -14,6 +14,8 @@
 		C581F616235B748B0059B3E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C581F615235B748B0059B3E4 /* Assets.xcassets */; };
 		C581F619235B748B0059B3E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C581F617235B748B0059B3E4 /* LaunchScreen.storyboard */; };
 		C581F61C235B748B0059B3E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C581F61B235B748B0059B3E4 /* main.m */; };
+		C581F62C235B84B80059B3E4 /* AvatarKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = C581F628235B841C0059B3E4 /* AvatarKit.framework */; };
+		C581F62D235B84B80059B3E4 /* AvatarUI.framework in Resources */ = {isa = PBXBuildFile; fileRef = C581F629235B841C0059B3E4 /* AvatarUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C581F61A235B748B0059B3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C581F61B235B748B0059B3E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C581F622235B74A30059B3E4 /* LaurelmojiCatalyst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaurelmojiCatalyst.entitlements; sourceTree = "<group>"; };
+		C581F628235B841C0059B3E4 /* AvatarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AvatarKit.framework; path = CopyAvatarFrameworks/outdir/AvatarKit.framework; sourceTree = SOURCE_ROOT; };
+		C581F629235B841C0059B3E4 /* AvatarUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AvatarUI.framework; path = CopyAvatarFrameworks/outdir/AvatarUI.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		C581F608235B74870059B3E4 /* LaurelmojiCatalyst */ = {
 			isa = PBXGroup;
 			children = (
+				C581F628235B841C0059B3E4 /* AvatarKit.framework */,
+				C581F629235B841C0059B3E4 /* AvatarUI.framework */,
 				C581F622235B74A30059B3E4 /* LaurelmojiCatalyst.entitlements */,
 				C581F609235B74870059B3E4 /* AppDelegate.h */,
 				C581F60A235B74870059B3E4 /* AppDelegate.m */,
@@ -135,6 +141,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C581F62C235B84B80059B3E4 /* AvatarKit.framework in Resources */,
+				C581F62D235B84B80059B3E4 /* AvatarUI.framework in Resources */,
 				C581F619235B748B0059B3E4 /* LaunchScreen.storyboard in Resources */,
 				C581F616235B748B0059B3E4 /* Assets.xcassets in Resources */,
 				C581F614235B74870059B3E4 /* Main.storyboard in Resources */,
@@ -295,6 +303,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 3D7RY4393N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CopyAvatarFrameworks/outdir",
+				);
 				INFOPLIST_FILE = LaurelmojiCatalyst/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,6 +327,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 3D7RY4393N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CopyAvatarFrameworks/outdir",
+				);
 				INFOPLIST_FILE = LaurelmojiCatalyst/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
