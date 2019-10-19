@@ -14,9 +14,41 @@
 		C581F616235B748B0059B3E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C581F615235B748B0059B3E4 /* Assets.xcassets */; };
 		C581F619235B748B0059B3E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C581F617235B748B0059B3E4 /* LaunchScreen.storyboard */; };
 		C581F61C235B748B0059B3E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C581F61B235B748B0059B3E4 /* main.m */; };
-		C581F62C235B84B80059B3E4 /* AvatarKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = C581F628235B841C0059B3E4 /* AvatarKit.framework */; };
-		C581F62D235B84B80059B3E4 /* AvatarUI.framework in Resources */ = {isa = PBXBuildFile; fileRef = C581F629235B841C0059B3E4 /* AvatarUI.framework */; };
+		C581F637235B94E70059B3E4 /* Messages.h in Headers */ = {isa = PBXBuildFile; fileRef = C581F635235B94E70059B3E4 /* Messages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C581F63A235B94E70059B3E4 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C581F633235B94E70059B3E4 /* Messages.framework */; };
+		C581F63B235B94E70059B3E4 /* Messages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C581F633235B94E70059B3E4 /* Messages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C581F641235BB79A0059B3E4 /* AvatarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C581F628235B841C0059B3E4 /* AvatarKit.framework */; };
+		C581F642235BB79A0059B3E4 /* AvatarKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C581F628235B841C0059B3E4 /* AvatarKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C581F643235BB79A0059B3E4 /* AvatarUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C581F629235B841C0059B3E4 /* AvatarUI.framework */; };
+		C581F644235BB79A0059B3E4 /* AvatarUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C581F629235B841C0059B3E4 /* AvatarUI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C581F646235BB8520059B3E4 /* MessagesStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = C581F645235BB8520059B3E4 /* MessagesStubs.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C581F638235B94E70059B3E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C581F5FE235B74870059B3E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C581F632235B94E70059B3E4;
+			remoteInfo = Messages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C581F63F235B94E70059B3E4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C581F642235BB79A0059B3E4 /* AvatarKit.framework in Embed Frameworks */,
+				C581F63B235B94E70059B3E4 /* Messages.framework in Embed Frameworks */,
+				C581F644235BB79A0059B3E4 /* AvatarUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C581F606235B74870059B3E4 /* LaurelmojiCatalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaurelmojiCatalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,10 +66,24 @@
 		C581F622235B74A30059B3E4 /* LaurelmojiCatalyst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaurelmojiCatalyst.entitlements; sourceTree = "<group>"; };
 		C581F628235B841C0059B3E4 /* AvatarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AvatarKit.framework; path = CopyAvatarFrameworks/outdir/AvatarKit.framework; sourceTree = SOURCE_ROOT; };
 		C581F629235B841C0059B3E4 /* AvatarUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AvatarUI.framework; path = CopyAvatarFrameworks/outdir/AvatarUI.framework; sourceTree = SOURCE_ROOT; };
+		C581F633235B94E70059B3E4 /* Messages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Messages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C581F635235B94E70059B3E4 /* Messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Messages.h; sourceTree = "<group>"; };
+		C581F636235B94E70059B3E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C581F645235BB8520059B3E4 /* MessagesStubs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesStubs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C581F603235B74870059B3E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C581F641235BB79A0059B3E4 /* AvatarKit.framework in Frameworks */,
+				C581F63A235B94E70059B3E4 /* Messages.framework in Frameworks */,
+				C581F643235BB79A0059B3E4 /* AvatarUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C581F630235B94E70059B3E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,7 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				C581F608235B74870059B3E4 /* LaurelmojiCatalyst */,
+				C581F634235B94E70059B3E4 /* Messages */,
 				C581F607235B74870059B3E4 /* Products */,
+				C581F640235BB79A0059B3E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C581F606235B74870059B3E4 /* LaurelmojiCatalyst.app */,
+				C581F633235B94E70059B3E4 /* Messages.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +133,35 @@
 			path = LaurelmojiCatalyst;
 			sourceTree = "<group>";
 		};
+		C581F634235B94E70059B3E4 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				C581F635235B94E70059B3E4 /* Messages.h */,
+				C581F636235B94E70059B3E4 /* Info.plist */,
+				C581F645235BB8520059B3E4 /* MessagesStubs.m */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		C581F640235BB79A0059B3E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C581F62E235B94E70059B3E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C581F637235B94E70059B3E4 /* Messages.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		C581F605235B74870059B3E4 /* LaurelmojiCatalyst */ = {
@@ -94,15 +171,35 @@
 				C581F602235B74870059B3E4 /* Sources */,
 				C581F603235B74870059B3E4 /* Frameworks */,
 				C581F604235B74870059B3E4 /* Resources */,
+				C581F63F235B94E70059B3E4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C581F639235B94E70059B3E4 /* PBXTargetDependency */,
 			);
 			name = LaurelmojiCatalyst;
 			productName = LaurelmojiCatalyst;
 			productReference = C581F606235B74870059B3E4 /* LaurelmojiCatalyst.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C581F632235B94E70059B3E4 /* Messages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C581F63C235B94E70059B3E4 /* Build configuration list for PBXNativeTarget "Messages" */;
+			buildPhases = (
+				C581F62E235B94E70059B3E4 /* Headers */,
+				C581F62F235B94E70059B3E4 /* Sources */,
+				C581F630235B94E70059B3E4 /* Frameworks */,
+				C581F631235B94E70059B3E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Messages;
+			productName = Messages;
+			productReference = C581F633235B94E70059B3E4 /* Messages.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -114,6 +211,9 @@
 				ORGANIZATIONNAME = "Zhuowei Zhang";
 				TargetAttributes = {
 					C581F605235B74870059B3E4 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					C581F632235B94E70059B3E4 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -132,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				C581F605235B74870059B3E4 /* LaurelmojiCatalyst */,
+				C581F632235B94E70059B3E4 /* Messages */,
 			);
 		};
 /* End PBXProject section */
@@ -141,11 +242,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C581F62C235B84B80059B3E4 /* AvatarKit.framework in Resources */,
-				C581F62D235B84B80059B3E4 /* AvatarUI.framework in Resources */,
 				C581F619235B748B0059B3E4 /* LaunchScreen.storyboard in Resources */,
 				C581F616235B748B0059B3E4 /* Assets.xcassets in Resources */,
 				C581F614235B74870059B3E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C581F631235B94E70059B3E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +269,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C581F62F235B94E70059B3E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C581F646235BB8520059B3E4 /* MessagesStubs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C581F639235B94E70059B3E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C581F632235B94E70059B3E4 /* Messages */;
+			targetProxy = C581F638235B94E70059B3E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C581F612235B74870059B3E4 /* Main.storyboard */ = {
@@ -343,6 +465,58 @@
 			};
 			name = Release;
 		};
+		C581F63D235B94E70059B3E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3D7RY4393N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Messages/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthdoingbadly.Messages;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C581F63E235B94E70059B3E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3D7RY4393N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Messages/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.worthdoingbadly.Messages;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,6 +534,15 @@
 			buildConfigurations = (
 				C581F620235B748B0059B3E4 /* Debug */,
 				C581F621235B748B0059B3E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C581F63C235B94E70059B3E4 /* Build configuration list for PBXNativeTarget "Messages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C581F63D235B94E70059B3E4 /* Debug */,
+				C581F63E235B94E70059B3E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

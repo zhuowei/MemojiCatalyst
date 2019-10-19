@@ -10,4 +10,9 @@ for i in AvatarKit AvatarUI
 do
 	cp -r "$simpath/System/Library/PrivateFrameworks/$i.framework" outdir/
 	./rewrite_lc_build outdir/$i.framework/$i outdir/$i.framework/$i
+	install_name_tool -id "@rpath/$i.framework/$i" \
+		-change "/System/Library/PrivateFrameworks/AvatarKit.framework/AvatarKit" \
+		"@rpath/AvatarKit.framework/AvatarKit" \
+		outdir/$i.framework/$i
 done
+#python3 replace_uikit_symbols.py outdir/AvatarUI.framework/AvatarUI outdir/AvatarUI.framework/AvatarUI

@@ -13,7 +13,7 @@ static void mod_header(struct mach_header_64* mh) {
 		switch (cmd->cmd) {
 			case LC_BUILD_VERSION: {
 				struct build_version_command* bv = (struct build_version_command*)cmd;
-				bv->platform = 6; // PLATFORM_UIKITFORMAC
+				bv->platform = PLATFORM_MACCATALYST;
 				return;
 			}
 		}
