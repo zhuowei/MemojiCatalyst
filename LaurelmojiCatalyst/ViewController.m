@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+@import ObjectiveC.runtime;
 
 @interface AVTUIEnvironment : NSObject
 + (AVTUIEnvironment*)defaultEnvironment;
@@ -21,6 +22,13 @@
 - (instancetype)initWithAvatarStore:(AVTAvatarStore*)store;;
 @end
 
+@interface AVTRenderer: NSObject
++ (AVTRenderer*)renderer;
+@end
+
+@interface AVTSnapshotBuilder: NSObject
+@end
+
 @interface UISelectionFeedbackGenerator (Laurelmoji)
 - (void)_setOutputMode:(int)mode;
 @end
@@ -30,10 +38,18 @@
 }
 @end
 
-static NSBundle* avatarKitBundle;
-static NSBundle* avatarUIBundle;
+static AVTSnapshotBuilder* (*AVTSnapshotBuilder_init_real)(AVTSnapshotBuilder*, SEL);
+
+static AVTSnapshotBuilder* AVTSnapshotBuilder_init_hook(AVTSnapshotBuilder* self, SEL sel) {
+    AVTRenderer* renderer = [AVTRenderer renderer];
+    [self setValue:renderer forKey:@"_renderer"];
+    return AVTSnapshotBuilder_init_real(self, sel);
+}
 
 static void loadAvatarKit() {
+    Method method = class_getInstanceMethod([AVTSnapshotBuilder class], @selector(init));
+    AVTSnapshotBuilder_init_real = (void*)method_getImplementation(method);
+    method_setImplementation(method, (void*)&AVTSnapshotBuilder_init_hook);
     /*
     if (avatarUIBundle) return;
     NSBundle* mainBundle = [NSBundle mainBundle];
