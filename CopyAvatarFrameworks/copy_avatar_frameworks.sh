@@ -15,4 +15,5 @@ do
 		"@rpath/AvatarKit.framework/AvatarKit" \
 		outdir/$i.framework/$i
 done
-#python3 replace_uikit_symbols.py outdir/AvatarUI.framework/AvatarUI outdir/AvatarUI.framework/AvatarUI
+bash rewrite_metallib.sh
+mv default.metallib outdir/AvatarKit.framework

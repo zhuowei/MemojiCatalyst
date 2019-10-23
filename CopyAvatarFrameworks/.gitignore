@@ -1,2 +1,5 @@
 outdir
 rewrite_lc_build
+llvm_path.conf
+metaltmp
+metaltmp2

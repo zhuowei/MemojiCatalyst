@@ -1,0 +1,2 @@
+# Update the path to point to your LLVM, then move this to llvm_path.conf
+llvm="/opt/clang+llvm-8.0.0-x86_64-apple-darwin/bin"
